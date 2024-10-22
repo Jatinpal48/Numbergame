@@ -1,0 +1,31 @@
+import java.util.Scanner;
+import java.util.Random;
+public class codesot {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
+        int count = 0;
+        System.out.println("guess a number between 0 to 100");
+        int userguess = sc.nextInt();
+        int computerchoice = rand.nextInt(100);
+        while(userguess != computerchoice){
+         if( userguess > computerchoice){
+            System.out.println("guess less then form current number");
+            userguess = sc.nextInt();
+            count++;
+        }
+        else{
+            System.out.println("guess more than the current one");
+            userguess = sc.nextInt();
+            count++;
+        }
+        }
+        if(userguess == computerchoice){
+            System.out.println("yess you guess it right");
+            System.out.println("computer choice is =  " + computerchoice);
+            System.out.println("Number of Trials = " + count);
+        }
+
+    }
+
+}
